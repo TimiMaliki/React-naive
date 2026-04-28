@@ -1,13 +1,10 @@
-import { View } from "react-native";
+import { View,Text} from "react-native";
 
 
 export default function App(){
   return(
-    <View style={{flex: 1, backgroundColor: "red",  }}>
-     <View style={{width: 100, height: 100, backgroundColor: "blue", padding: 20}}>
-      </View>
-        <View style={{width: 100, height: 100, backgroundColor: "green", padding: 70}}>
-      </View>
+    <View style={{flex: 1, backgroundColor: "red",  padding: "80"}}>
+     <Text><Text style={{color: "white"}}>Hello</Text>, World!</Text>   
     </View>
   )
 }
