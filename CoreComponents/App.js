@@ -25,6 +25,7 @@ export default function App() {
           visible={modalVisible}
           onRequestClose={()=>setModalVisible(false)}
           animationType="slide"
+          presentationStyle="pageSheet"
         >
           <View style={{backgroundColor: "white", padding: "30" }}>
             <Text style={{ color: "black", fontSize: 30, fontWeight: "bold" }}>
