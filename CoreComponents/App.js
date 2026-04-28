@@ -23,6 +23,8 @@ export default function App() {
         />
         <Modal
           visible={modalVisible}
+          onRequestClose={()=>setModalVisible(false)}
+          animationType="slide"
         >
           <View style={{backgroundColor: "white", padding: "30" }}>
             <Text style={{ color: "black", fontSize: 30, fontWeight: "bold" }}>
