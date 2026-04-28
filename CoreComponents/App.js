@@ -1,10 +1,11 @@
-import { View,Text} from "react-native";
+import {View,Text,Image} from "react-native";
+const Socrates = require("./assets/Pin su 风格.jpeg")
 
 
 export default function App(){
   return(
-    <View style={{flex: 1, backgroundColor: "red",  padding: "80"}}>
-     <Text><Text style={{color: "white"}}>Hello</Text>, World!</Text>   
+    <View style={{flex: 1, backgroundColor: "red",  padding: "80"}}> 
+     <Image source={Socrates} style={{width: 500, height: 500}} />
     </View>
   )
 }
