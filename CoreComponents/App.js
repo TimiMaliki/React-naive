@@ -6,6 +6,7 @@ import {
   Button,
   Pressable,
   Modal,
+  StatusBar
 } from "react-native";
 const Socrates = require("./assets/Pin su 风格.jpeg");
 import { useState } from "react";
@@ -15,6 +16,7 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, backgroundColor: "red", padding: "30" }}>
+      <StatusBar backgroundColor={"lightgreen"}/>
       <ScrollView>
           <Button
           title="Modal"
@@ -25,7 +27,7 @@ export default function App() {
           visible={modalVisible}
           onRequestClose={()=>setModalVisible(false)}
           animationType="slide"
-          presentationStyle="pageSheet"
+          presentationStyle="formSheet"
         >
           <View style={{backgroundColor: "white", padding: "30" }}>
             <Text style={{ color: "black", fontSize: 30, fontWeight: "bold" }}>
