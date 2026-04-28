@@ -14,7 +14,7 @@ export default function App(){
          qui animi vitae quos perferendis similique itaque facilis suscipit fuga, obcaecati repudian
       </Text>
       </Pressable>
-        <Pressable onPress={() => console.log("image pressed")}>
+        <Pressable onPressIn={() => console.log("image pressed")}>
      <ImageBackground source={Socrates} style={{flex:1, width: 300, height: 500}}>
      </ImageBackground>
      </Pressable>
