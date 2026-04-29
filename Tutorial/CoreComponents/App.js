@@ -1,67 +1,27 @@
 import {
- View,
- Text,
- StyleSheet
+  StyleSheet,
+  View,
 } from "react-native";
 
+import Box from "./component/Box";
 
-
-export const styles = StyleSheet.create({
-  container:{
-      flex:1,
-      padding:60,
-  },
-  text: {
-    fontSize: 30,
-    fontWeight: "bold",
-    color: "black",
-  },
-  box:{
-    width: 250,
-    height: 250,
-    color: "black",
-    paddingHorizontal:10,
-    paddingVertical:30,
-    marginVertical:20,
-    border:2,
-    borderColor:"black",
-    borderRadius:10,
-  },
-  bluebox:{
-    backgroundColor: "lightblue",
-  },
-   greenbox:{
-    backgroundColor: "lightgreen",
-  },
-  boxShadow:{
-    shadowColor:"111",
-    shadowOffset:{width:6,height:6},
-    shadowOpacity:0.5,
-    shadowRadius:10
-  },
-  androidShadow:{
-    elevation: 10
-  }
-
-});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+marginTop:  60}
+})
 
 export default function App() {
  
   return (
     <View style={styles.container}>
-       <Text style={styles.text}>
-        StyleSheet API
-       </Text>
-
-       <View style={[styles.box, styles.bluebox, styles.androidShadow]}>
-      <Text style={styles.text}>BlueBox</Text>
-       </View>
-
-      <View style={[styles.box, styles.greenbox, styles.androidShadow]}>
-       <Text style={styles.text}>GreenBox</Text>
-       </View>
-
-
+    <Box style={{backgroundColor:"blue"}}> Box 1</Box>
+     <Box style={{backgroundColor:"black"}}> Box 2</Box>
+      <Box style={{backgroundColor:"red"}}> Box 3</Box>
+       <Box style={{backgroundColor:"green"}}> Box 4</Box>
+       <Box style={{backgroundColor:"yellow"}}> Box 5</Box>
+      <Box style={{backgroundColor:"lemonchiffon"}}> Box 6</Box>
+       <Box style={{backgroundColor:"skyblue"}}> Box 7</Box>
     </View>
   );
 }
