@@ -12,24 +12,23 @@ export const styles = StyleSheet.create({
       padding:44,
   },
   text: {
-    padding:70,
     fontSize: 20,
     fontWeight: "bold",
     color: "black",
   },
   bluebox:{
-    width: 100,
-    height: 100,
+     width: 300,
+    height: 300,
     backgroundColor: "lightblue",
     color: "black",
-    padding:70,
+    padding:40,
   },
    greenbox:{
-    width: 100,
-    height: 100,
+    width: 300,
+    height: 300,
     backgroundColor: "lightgreen",
     color: "black",
-    padding:70,
+    padding:40,
   },
 
 });
