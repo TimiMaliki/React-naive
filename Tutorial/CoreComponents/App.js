@@ -9,19 +9,23 @@ import {
 export const styles = StyleSheet.create({
   container:{
       flex:1,
-      padding:44,
+      padding:60,
   },
   text: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: "bold",
     color: "black",
   },
   box:{
-    width: 300,
-    height: 300,
+    width: 250,
+    height: 250,
     color: "black",
     paddingHorizontal:10,
-    paddingVertical:10,
+    paddingVertical:30,
+    marginVertical:20,
+    border:2,
+    borderColor:"black",
+    borderRadius:10,
   },
   bluebox:{
     backgroundColor: "lightblue",
@@ -29,6 +33,15 @@ export const styles = StyleSheet.create({
    greenbox:{
     backgroundColor: "lightgreen",
   },
+  boxShadow:{
+    shadowColor:"111",
+    shadowOffset:{width:6,height:6},
+    shadowOpacity:0.5,
+    shadowRadius:10
+  },
+  androidShadow:{
+    elevation: 10
+  }
 
 });
 
@@ -40,11 +53,11 @@ export default function App() {
         StyleSheet API
        </Text>
 
-       <View style={[styles.box, styles.bluebox]}>
+       <View style={[styles.box, styles.bluebox, styles.androidShadow]}>
       <Text style={styles.text}>BlueBox</Text>
        </View>
 
-      <View style={[styles.box, styles.greenbox]}>
+      <View style={[styles.box, styles.greenbox, styles.androidShadow]}>
        <Text style={styles.text}>GreenBox</Text>
        </View>
 
