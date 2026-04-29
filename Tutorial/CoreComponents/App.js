@@ -7,7 +7,6 @@ import {
 
 
 export const styles = StyleSheet.create({
-
   container:{
       flex:1,
       padding:44,
@@ -15,17 +14,22 @@ export const styles = StyleSheet.create({
   text: {
     padding:70,
     fontSize: 20,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: "black",
   },
   bluebox:{
     width: 100,
     height: 100,
-    backgroundColor: "blue"
+    backgroundColor: "lightblue",
+    color: "black",
+    padding:70,
   },
    greenbox:{
     width: 100,
     height: 100,
-    backgroundColor: "green"
+    backgroundColor: "lightgreen",
+    color: "black",
+    padding:70,
   },
 
 });
@@ -39,15 +43,11 @@ export default function App() {
        </Text>
 
        <View style={styles.bluebox}>
-         <Text style={styles.text}>
-        StyleSheet API
-       </Text>
+      <Text style={styles.text}>BlueBox</Text>
        </View>
 
       <View style={styles.greenbox}>
-         <Text style={styles.text}>
-        StyleSheet API
-       </Text>
+       <Text style={styles.text}>GreenBox</Text>
        </View>
 
 
