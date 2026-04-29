@@ -11,6 +11,7 @@ import {
   Alert
 } from "react-native";
 const Socrates = require("./assets/Pin su 风格.jpeg");
+import Greet from "./components/Greet";
 import { useState } from "react";
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
             <Text style={{ color: "black", fontSize: 30, fontWeight: "bold" }}>
               Modal
             </Text>
+             <Greet name={"Timi Maliki"} />
             <Button
               title="Close me"
               onPress={() => setModalVisible(false)}
@@ -64,7 +66,11 @@ export default function App() {
         </Pressable>
         <Button
           title="Click Me"
-          onPress={() => Alert.alert("Cool Project")}
+          onPress={() => Alert.alert("Cool Project", "Yes it is :)!",[
+            {text:"Cancel", onPress:()=>console.log("cancelled")},
+            {text:"Okay", onPress:()=>console.log("Ok")},
+          ])
+        }
           color={"purple"}
         />
       </ScrollView>
