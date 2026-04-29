@@ -8,7 +8,10 @@ import Box from "./component/Box";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-marginTop:  60}
+marginTop:60,
+borderWidth:6,
+borderColor:"red",
+}
 })
 
 export default function App() {

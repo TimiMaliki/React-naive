@@ -4,12 +4,14 @@ import {View, Text, StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
     box:{
         backgroundColor:"white",
-        padding:20,
-        width:250,
-        height:250,
+        padding:50,
+        width:500,
+        height:100,
+        color:"white",
     },
     text:{
         fontSize:30,
+        color:"white",
         fontWeight:"bold",
         textAlign:"center",
     }
