@@ -6,7 +6,8 @@ import {
   Button,
   Pressable,
   Modal,
-  StatusBar
+  StatusBar,
+  ActivityIndicator
 } from "react-native";
 const Socrates = require("./assets/Pin su 风格.jpeg");
 import { useState } from "react";
@@ -16,7 +17,7 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, backgroundColor: "red", padding: "30" }}>
-      <StatusBar backgroundColor={"lightgreen"}/>
+      <StatusBar backgroundColor={"lightgreen"} barStyle="light-content"/>
       <ScrollView>
           <Button
           title="Modal"
@@ -29,6 +30,7 @@ export default function App() {
           animationType="slide"
           presentationStyle="formSheet"
         >
+         
           <View style={{backgroundColor: "white", padding: "30" }}>
             <Text style={{ color: "black", fontSize: 30, fontWeight: "bold" }}>
               Modal
@@ -38,6 +40,7 @@ export default function App() {
               onPress={() => setModalVisible(false)}
               color={"blue"}
             />
+             <ActivityIndicator/>
           </View>
         </Modal>
         <Pressable onPress={() => console.log("text pressed")}>
