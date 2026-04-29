@@ -7,7 +7,8 @@ import {
   Pressable,
   Modal,
   StatusBar,
-  ActivityIndicator
+  ActivityIndicator,
+  Alert
 } from "react-native";
 const Socrates = require("./assets/Pin su 风格.jpeg");
 import { useState } from "react";
@@ -63,7 +64,7 @@ export default function App() {
         </Pressable>
         <Button
           title="Click Me"
-          onPress={() => console.log("click")}
+          onPress={() => Alert.alert("Cool Project")}
           color={"purple"}
         />
       </ScrollView>
