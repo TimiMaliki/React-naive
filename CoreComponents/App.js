@@ -40,7 +40,7 @@ export default function App() {
               onPress={() => setModalVisible(false)}
               color={"blue"}
             />
-             <ActivityIndicator/>
+             <ActivityIndicator size={"large"} color={"black"} animating={true}/>
           </View>
         </Modal>
         <Pressable onPress={() => console.log("text pressed")}>
