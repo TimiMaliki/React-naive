@@ -16,19 +16,18 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "black",
   },
-  bluebox:{
-     width: 300,
-    height: 300,
-    backgroundColor: "lightblue",
-    color: "black",
-    padding:40,
-  },
-   greenbox:{
+  box:{
     width: 300,
     height: 300,
-    backgroundColor: "lightgreen",
     color: "black",
-    padding:40,
+    paddingHorizontal:10,
+    paddingVertical:10,
+  },
+  bluebox:{
+    backgroundColor: "lightblue",
+  },
+   greenbox:{
+    backgroundColor: "lightgreen",
   },
 
 });
@@ -41,11 +40,11 @@ export default function App() {
         StyleSheet API
        </Text>
 
-       <View style={styles.bluebox}>
+       <View style={[styles.box, styles.bluebox]}>
       <Text style={styles.text}>BlueBox</Text>
        </View>
 
-      <View style={styles.greenbox}>
+      <View style={[styles.box, styles.greenbox]}>
        <Text style={styles.text}>GreenBox</Text>
        </View>
 
