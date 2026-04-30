@@ -4,8 +4,8 @@ import {View, Text, StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
     box:{
         padding:10,
-        width:500,
-        height:50,
+        width:100,
+        height:100,
     },
     text:{
         fontSize:40,
