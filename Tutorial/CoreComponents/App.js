@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "row",
-    alignItems: "baseline",
+    alignSelf: "stretch",
     marginTop: 64,
     borderWidth: 6,
     borderColor: "red",
