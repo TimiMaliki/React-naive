@@ -22,13 +22,13 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <View style={[styles.text, styles.container]}>
-      <Box style={{ backgroundColor: "green",}}>  Box 1 </Box>
-      <Box style={{ backgroundColor: "black",}}> Box 2</Box>
-      <Box style={{ backgroundColor: "red",}}> Box 3 </Box>
-      <Box style={{ backgroundColor: "green"}}> Box 4 </Box>
-      <Box style={{ backgroundColor: "yellow"}}> Box 5 </Box>
-      <Box style={{ backgroundColor: "lemonchiffon"}}> Box 6 </Box>
-      <Box style={{ backgroundColor: "skyblue"}}> Box 7 </Box>
+      <Box style={{ backgroundColor: "green" }} Children="Box 1" />
+      <Box style={{ backgroundColor: "black" }} Children="Box 2" />
+      <Box style={{ backgroundColor: "red" }} Children="Box 3" />
+      <Box style={{ backgroundColor: "green" }} Children="Box 4" />
+      <Box style={{ backgroundColor: "yellow" }} Children="Box 5" />
+      <Box style={{ backgroundColor: "lemonchiffon" }} Children="Box 6" />
+      <Box style={{ backgroundColor: "skyblue" }} Children="Box 7" />
     </View>
   );
 }
