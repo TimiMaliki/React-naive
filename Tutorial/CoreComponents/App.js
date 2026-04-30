@@ -4,9 +4,9 @@ import Box from "./component/Box";
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     flexWrap: "wrap",
-     alignContent: "space-between",
+    columnGap: 20,
     height: 300,
     marginTop: 64,
     borderWidth: 6,
