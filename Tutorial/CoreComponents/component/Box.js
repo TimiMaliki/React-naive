@@ -3,14 +3,13 @@ import {View, Text, StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
     box:{
-        padding:50,
+        padding:10,
         width:500,
-        height:100,
+        height:50,
     },
     text:{
-        fontSize:10,
-        fontWeight:"bold",
-        textAlign:"center",
+        fontSize:40,
+        color:"white",
     }
 });
 
