@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "blue",
-    paddingTop: Platform.OS === "android" ? 40 : 0,
+    paddingTop: Platform.OS === "ios" ? 25 : 70,
   },
   box: {
     alignItems: "center",
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   text: {
     ...Platform.select({
       ios:{
-        color:"purple"
+        color:"black"
       },
       android:{
         color:"white"
