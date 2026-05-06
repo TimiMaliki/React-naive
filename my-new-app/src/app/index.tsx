@@ -2,20 +2,7 @@ import { useState, useEffect } from "react";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 
 
-const [dimensions, setDimensions] = useState({
-  window: Dimensions.get("window"),
-});
 
-useEffect(() => {
-  const subscription = Dimensions.addEventListener("change", ({ window }) => {
-    setDimensions({ window });
-  });
-  return () => subscription?.remove();
-});
-
-const { window } = dimensions;
-const windowWidth = window.width;
-const windowHeight = window.height;
 
 // const windowWidth = Dimensions.get("window").width
 // const windowHeight = Dimensions.get("window").height
@@ -41,6 +28,20 @@ const styles = StyleSheet.create({
 });
 
 export default function HomeScreen() {
+  const [dimensions, setDimensions] = useState({
+  window: Dimensions.get("window"),
+});
+
+useEffect(() => {
+  const subscription = Dimensions.addEventListener("change", ({ window }) => {
+    setDimensions({ window });
+  });
+  return () => subscription?.remove();
+},[]);
+
+const { window } = dimensions;
+const windowWidth = window.width;
+const windowHeight = window.height;
   return (
     <View style={styles.container}>
       <View
