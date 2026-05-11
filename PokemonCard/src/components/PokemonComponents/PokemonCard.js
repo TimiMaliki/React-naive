@@ -57,7 +57,7 @@ fontSize:26,
 },
 typeContainer:{
 alignItems:"center",
-marginBottom:40,
+marginBottom:20,
 },
 typeEmoji:{
 fontSize:26,
