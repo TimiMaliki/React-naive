@@ -59,7 +59,7 @@ export default function HomeScreen() {
   return (
    <SafeAreaView style={style.container}>
      <View>
-      <Text style={style.text}>Pokemon</Text>
+      <Text style={style.text}>Pokemon Cards</Text>
     <ScrollView>
         <PokemonCard {...CharmanderData} />
       <PokemonCard {...squirtleData} />
