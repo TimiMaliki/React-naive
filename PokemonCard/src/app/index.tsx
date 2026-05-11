@@ -1,4 +1,4 @@
-import {StyleSheet, View, Text, Platform} from 'react-native';
+import {StyleSheet, View, Text, Platform,ScrollView} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import PokemonCard from '../components/PokemonComponents/PokemonCard';
 
@@ -60,10 +60,12 @@ export default function HomeScreen() {
    <SafeAreaView style={style.container}>
      <View>
       <Text style={style.text}>Pokemon</Text>
-      <PokemonCard {...CharmanderData} />
+    <ScrollView>
+        <PokemonCard {...CharmanderData} />
       <PokemonCard {...squirtleData} />
       <PokemonCard {...bulbasaurData} />
       <PokemonCard {...pikachuData} />
+    </ScrollView>
     </View>
    </SafeAreaView>
 
