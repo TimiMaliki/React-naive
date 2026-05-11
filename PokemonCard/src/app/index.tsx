@@ -1,4 +1,5 @@
-import {StyleSheet, View, Text } from 'react-native';
+import {StyleSheet, View, Text, Platform} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import PokemonCard from '../components/PokemonComponents/PokemonCard';
 
 
@@ -7,6 +8,7 @@ const style = StyleSheet.create({
   container: {
     flex: 1,
     padding: 70,
+    paddingTop:Platform.OS === "android" ? 25 : 0,
     backgroundColor: '#fff',
   },
   text:{
@@ -19,9 +21,12 @@ const style = StyleSheet.create({
 
 export default function HomeScreen() {
   return (
-    <View style={style.container}>
+   <SafeAreaView style={style.container}>
+     <View>
       <Text style={style.text}>Home</Text>
       <PokemonCard />
     </View>
+   </SafeAreaView>
+
   );
 }
