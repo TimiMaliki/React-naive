@@ -80,6 +80,20 @@ typeText:{
 fontSize:26,
  fontWeight:"bold",
 },
+movesContainer:{
+marginBottom:20,
+},
+movesText:{
+fontSize:21,
+ fontWeight:"bold",
+},
+weaknessesContainer:{
+marginBottom:20,
+},
+weaknessesText:{
+fontSize:21,
+ fontWeight:"bold",
+},
   imageWidth:{
     width:300,
     height:300,
@@ -108,11 +122,11 @@ const PokemonCard = ({ CharmanderData }) => {
       </View>
       </View>
 
-      <View>
-        <Text style={styles.moves}>Moves: {CharmanderData.moves.join(", ")}</Text>
+      <View style={styles.movesContainer}>
+        <Text style={styles.movesText}>Moves: {CharmanderData.moves.join(", ")}</Text>
       </View>
-      <View>
-        <Text style={styles.weaknesses}>Weaknesses: {CharmanderData.weaknesses.join(", ")}</Text>
+      <View style={styles.weaknessesContainer}>
+        <Text style={styles.weaknessesText}>Weaknesses: {CharmanderData.weaknesses.join(", ")}</Text>
       </View>
 
     </View>
