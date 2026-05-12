@@ -22,6 +22,9 @@ const styles = StyleSheet.create({
   cardText: {
     fontSize: 22,
   },
+  HeaderText: {
+    fontSize: 30,
+  }
 });
 
 export default function HomeScreen() {
@@ -43,6 +46,8 @@ export default function HomeScreen() {
          }}
          keyExtractor={(item) => item.id.toString()}
          ItemSeparatorComponent={<View style={{height: 10}}/>}
+         ListEmptyComponent={<Text>No Items Found</Text>}
+         ListHeaderComponent={<Text style={styles.HeaderText}>Pokemon List</Text>}
          />
   </SafeAreaView>;
 }
