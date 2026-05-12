@@ -1,34 +1,54 @@
-import {StyleSheet, View,Text,ScrollView,StatusBar } from 'react-native';
-import pokemonList from "./data.json"
-import { SafeAreaView} from 'react-native-safe-area-context';
-
+import { StyleSheet,View,Text,ScrollView,StatusBar,FlatList } from "react-native";
+import pokemonList from "./data.json";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     padding: 20,
-    paddingTop:StatusBar.currentHeight 
+    paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
     paddingHorizontal: 20,
   },
-  card:{
-    backgroundColor: '#f0f0f0',
+  card: {
+    backgroundColor: "#f0f0f0",
     borderRadius: 10,
     padding: 15,
-    marginBottom: 10,
+    // marginBottom: 10,
     borderWidth: 1,
   },
-  cardText:{
+  cardText: {
     fontSize: 22,
-  }}
-)
+  },
+});
 
 export default function HomeScreen() {
-  return (
-         <SafeAreaView style={styles.container}>
-          <ScrollView style={styles.scrollView}>
+  return <SafeAreaView style={styles.container}>
+         <FlatList 
+         data={pokemonList}
+         renderItem={({item}) => {
+          console.log(item.id)
+          return(
+           <View style={styles.card} key={item.id}>
+             <Text style={styles.cardText}>
+            {item.name}
+           </Text>
+             <Text style={styles.cardText}>
+            {item.type}
+           </Text>
+           </View>
+           )
+         }}
+         keyExtractor={(item) => item.id.toString()}
+         ItemSeparatorComponent={<View style={{height: 10}}/>}
+         />
+  </SafeAreaView>;
+}
+
+{
+  /* <ScrollView style={styles.scrollView}>
      <View >
         <Text>Pokemon List</Text>
     </View>
@@ -49,9 +69,5 @@ export default function HomeScreen() {
 })
       }
     </View>
-     </ScrollView>
-   </SafeAreaView>
-   
-  );
+     </ScrollView> */
 }
-
