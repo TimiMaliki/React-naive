@@ -1,5 +1,14 @@
-import { StyleSheet,View,Text,ScrollView,StatusBar,FlatList } from "react-native";
+import {
+  StyleSheet,
+  View,
+  Text,
+  ScrollView,
+  StatusBar,
+  FlatList,
+  SectionList
+} from "react-native";
 import pokemonList from "./data.json";
+import groupedPokemonList from "./grouped-data.json";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const styles = StyleSheet.create({
@@ -25,36 +34,20 @@ const styles = StyleSheet.create({
   HeaderText: {
     fontSize: 30,
     padding: 10,
-     textAlign: "center",
-     marginBottom: 20,
-     fontWeight: "bold",
-  }
+    textAlign: "center",
+    marginBottom: 20,
+    fontWeight: "bold",
+  },
 });
 
 export default function HomeScreen() {
-  return <SafeAreaView style={styles.container}>
-         <FlatList 
-         data={pokemonList}
-         renderItem={({item}) => {
-          console.log(item.id)
-          return(
-           <View style={styles.card} key={item.id}>
-             <Text style={styles.cardText}>
-            {item.name}
-           </Text>
-             <Text style={styles.cardText}>
-            {item.type}
-           </Text>
-           </View>
-           )
-         }}
-         keyExtractor={(item) => item.id.toString()}
-         ItemSeparatorComponent={<View style={{height: 10}}/>}
-         ListEmptyComponent={<Text>No Items Found</Text>}
-         ListHeaderComponent={<Text style={styles.HeaderText}>Pokemon List</Text>}
-         ListFooterComponent={<Text style={styles.HeaderText}>End of List</Text>}
-         />
-  </SafeAreaView>;
+  return (
+    <SafeAreaView style={styles.container}>
+    <View style={styles.scrollView}>
+
+    </View>
+    </SafeAreaView>
+  );
 }
 
 {
@@ -81,3 +74,23 @@ export default function HomeScreen() {
     </View>
      </ScrollView> */
 }
+
+  // <FlatList
+  //       data={pokemonList}
+  //       renderItem={({ item }) => {
+  //         console.log(item.id);
+  //         return (
+  //           <View style={styles.card} key={item.id}>
+  //             <Text style={styles.cardText}>{item.name}</Text>
+  //             <Text style={styles.cardText}>{item.type}</Text>
+  //           </View>
+  //         );
+  //       }}
+  //       keyExtractor={(item) => item.id.toString()}
+  //       ItemSeparatorComponent={<View style={{ height: 10 }} />}
+  //       ListEmptyComponent={<Text>No Items Found</Text>}
+  //       ListHeaderComponent={
+  //         <Text style={styles.HeaderText}>Pokemon List</Text>
+  //       }
+  //       ListFooterComponent={<Text style={styles.HeaderText}>End of List</Text>}
+  //     />
