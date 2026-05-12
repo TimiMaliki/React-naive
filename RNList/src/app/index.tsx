@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
   },
   HeaderText: {
     fontSize: 30,
+     textAlign: "center",
+     marginBottom: 20,
+     fontWeight: "bold",
   }
 });
 
