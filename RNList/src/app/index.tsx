@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
   },
   HeaderText: {
     fontSize: 30,
+    padding: 10,
      textAlign: "center",
      marginBottom: 20,
      fontWeight: "bold",
@@ -51,6 +52,7 @@ export default function HomeScreen() {
          ItemSeparatorComponent={<View style={{height: 10}}/>}
          ListEmptyComponent={<Text>No Items Found</Text>}
          ListHeaderComponent={<Text style={styles.HeaderText}>Pokemon List</Text>}
+         ListFooterComponent={<Text style={styles.HeaderText}>End of List</Text>}
          />
   </SafeAreaView>;
 }
