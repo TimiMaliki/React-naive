@@ -12,9 +12,17 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     paddingHorizontal: 20,
-  }
-}
-
+  },
+  card:{
+    backgroundColor: '#f0f0f0',
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 10,
+    borderWidth: 1,
+  },
+  cardText:{
+    fontSize: 22,
+  }}
 )
 
 export default function HomeScreen() {
@@ -29,11 +37,11 @@ export default function HomeScreen() {
       {
         pokemonList.map((pokemon) => {
            return(
-           <View key={pokemon.id}>
-             <Text>
+           <View style={styles.card} key={pokemon.id}>
+             <Text style={styles.cardText}>
             {pokemon.name}
            </Text>
-             <Text>
+             <Text style={styles.cardText}>
             {pokemon.type}
            </Text>
            </View>
