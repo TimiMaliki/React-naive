@@ -43,6 +43,8 @@ export default function HomeScreen() {
         placeholder="email@gmail.com"
         secureTextEntry={true}
         keyboardType="numeric"
+        autoCapitalize="none"
+        autoCorrect={false}
       />
       <Text style={styles.Text}>My Name is {text}</Text>
     </SafeAreaView>
