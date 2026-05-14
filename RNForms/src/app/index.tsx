@@ -1,9 +1,4 @@
-import {
-  StyleSheet,
- TextInput,
-  StatusBar,
-  Text
-} from "react-native";
+import { StyleSheet, TextInput, StatusBar, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react";
 
@@ -41,9 +36,15 @@ export default function HomeScreen() {
   const [text, setText] = useState("");
   return (
     <SafeAreaView style={styles.container}>
-    <TextInput  style={styles.textInput} value={text} onChangeText={setText}/>
-    <Text style={styles.Text}>My Name is {text}</Text>
+      <TextInput
+        style={styles.textInput}
+        value={text}
+        onChangeText={setText}
+        placeholder="email@gmail.com"
+        secureTextEntry={true}
+        keyboardType="numeric"
+      />
+      <Text style={styles.Text}>My Name is {text}</Text>
     </SafeAreaView>
   );
 }
-
