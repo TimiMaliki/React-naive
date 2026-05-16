@@ -1,0 +1,137 @@
+ const [username , setUsername] = useState("")
+   const [password , setPassword] = useState("") 
+ 
+ //  const handleSubmit = () => {
+  //   if(password && username){
+  //       console.log("Submitted" , username, password)
+  //   }
+  //   setUsername("")
+  //   setPassword("")
+  //  }
+
+    // <View style={styles.form}>
+    //     <Text style={styles.label}>Username</Text>
+    //       <TextInput placeholder="Enter your Username" style={styles.input} value={username} onChangeText={setUsername} />
+  
+    //     <Text style={styles.label}>Password</Text>
+    //     <TextInput placeholder="Enter your password" secureTextEntry style={styles.input} value={password} onChangeText={setPassword} />
+    //     <Button 
+    //     title="Login"
+    //     onPress={() => {handleSubmit}}
+    //     />
+    //   </View>
+
+
+
+// const [text, setText] = useState("");
+//   const [toggle, setToggle] = useState(false)
+
+// <TextInput
+//       style={styles.textInput}
+//       value={text}
+//       onChangeText={setText}
+//       placeholder="email@gmail.com"
+//       secureTextEntry={true}
+//       keyboardType="numeric"
+//       autoCapitalize="none"
+//       autoCorrect={false}
+//     />
+//      <TextInput
+//       style={styles.textArea}
+//       multiline
+//       placeholder="Enter your message"
+//     />
+
+//     <Text style={styles.Text}>My Name is {text}</Text>
+//      <Text style={styles.Text}>Dark Mode</Text>
+//     <View style={styles.SwitchContainer}>
+// <Switch
+// value={toggle}
+// onValueChange={() => setToggle((prev) => !prev )}
+// trackColor={{false:"#000" , true:"blue"}}
+// thumbColor={"red"}
+// />
+//     </View>
+
+//  scrollView: {
+//     paddingHorizontal: 20,
+//   },
+
+// card: {
+//   backgroundColor: "#f0f0f0",
+//   borderRadius: 10,
+//   padding: 15,
+//   // marginBottom: 10,
+//   borderWidth: 1,
+// },
+// Text: {
+//   fontSize: 22,
+//   color: "#000",
+// },
+
+//  textInput: {
+//   height: 40,
+//   borderColor: "gray",
+//   borderWidth: 1,
+//   marginBottom: 20,
+//   paddingHorizontal: 10,
+// },
+//   textArea: {
+//   minHeight: 140,
+//    borderColor: "black",
+//    padding: 10,
+//   borderWidth: 1,
+//   marginBottom: 20,
+// },
+// SwitchContainer:{
+//   flexDirection: "row",
+//   alignItems:"center",
+//   justifyContent:"center",
+//   paddingHorizontal: 10
+// }
+
+
+
+
+
+
+  // const [errors , setErrors] = useState({})
+
+  //   const validatesForm = () => {
+  //       let errors = {}
+
+  //       if(!username) errors.username = "Username is required"
+  //           if(!password) errors.password = "password is required"
+
+  //           return Object.keys(errors.length === 0)
+  //   }
+
+
+
+    form: {
+    backgroundColor: "#fff",
+    padding: 70,
+    borderRadius: 10,
+    shadowColor: "black",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 1,
+  },
+
+  label: {
+    fontSize: 16,
+    marginBottom: 5,
+    fontWeight: "bold",
+  },
+  input: {
+    height: 40,
+    borderColor: "black",
+    padding: 10,
+    borderWidth: 1,
+    borderRadius: 5,
+    marginBottom: 20,
+  },
